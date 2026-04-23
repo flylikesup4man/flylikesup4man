@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kursats.dev</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RZEC2FG5S6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RZEC2FG5S6');
+  </script>
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --text: #f1f5f9;
+      --accent: #38bdf8;
+    }
+
+    [data-theme="light"] {
+      --bg: #f8fafc;
+      --text: #0f172a;
+      --accent: #2563eb;
+    }
+
+    body {
+      margin: 0;
+      padding: 2rem;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    h1 {
+      color: var(--accent);
+      font-size: 2.8rem;
+    }
+
+    
+    p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    .socials a {
+      margin: 0 0.5rem;
+      font-size: 1.6rem;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .projects {
+      margin-top: 3rem;
+    }
+
+    .project-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .project-item a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--accent);
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+    }
+    footer:hover {
+      opacity: 1
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Tema Değiştirici -->
+  <button class="theme-toggle" onclick="toggleTheme()" title="Tema Değiştir">
+    <i class="ri-moon-line"></i>
+  </button>
+
+  <!-- Giriş -->
+  <h1>Kürşat Şahin</h1>
+  <p>I build and improve things.<br>
+  Always learning, always building.</p>
+
+  <!-- Sosyal Linkler -->
+  <div class="socials">
+    <a href="https://github.com/flylikesup4man" target="_blank" rel="noopener noreferrer"> <i class="ri-github-fill"></i></a>
+    <a href="https://linkedin.com/in/kursat0sahin" target="_blank"><i class="ri-linkedin-fill"></i></a>
+    <a href="https://open.spotify.com/user/11128104647?si=eb57247d71834d99" target="_blank"><i class="ri-spotify-fill"></i></a>
+    <a href="https://horusforgedev.itch.io" target="_blank" rel="noopener noreferrer" aria-label="itch.io"> <i class="fa-brands fa-itch-io"></i> </a>
+  </div>
+
+  <!-- Projeler -->
+  <section class="projects">
+    <h2>Projects</h2>
+
+    <div class="project-item">
+      <a href="https://tarot.kursats.dev" target="_blank">tarot.kursats.dev</a>
+      <p>*AI-Powered Tarot Web App</p>
+    </div>
+
+    <div class="project-item">
+      <a href="https://catoto.kursats.dev" target="_blank">catoto.kursats.dev</a>
+      <p>*Casual Game Demo with Unity</p>
+    </div>
+
+    <div class="project-item">
+      <a href="https://gym.kursats.dev" target="_blank">gym.kursats.dev</a>
+      <p>*Gym Workout Tracking Web App</p>
+    </div>
+
+    <div class="project-item">
+      <a href="https://2048.kursats.dev" target="_blank">2048.kursats.dev</a>
+      <p>*Medieval-Themed 2048 Puzzle Game</p>
+    </div>
+
+    <div class="project-item">
+      <a href="https://portfolio.kursats.dev" target="_blank">portfolio.kursats.dev</a>
+      <p>*Time Series Forecasting with ARIMA</p>
+    </div>
+
+    <div class="project-item">
+      <a href="https://iftar.kursats.dev" target="_blank">iftar.kursats.dev</a>
+      <p>*Location-based Iftar & Sahur Time Tracker</p>
+    </div>
+  </section>
+
+  <footer>&copy; 2025 | kursats.dev</footer>
+
+  <script>
+    function toggleTheme() {
+      const isLight = document.documentElement.getAttribute("data-theme") === "light";
+      document.documentElement.setAttribute("data-theme", isLight ? "dark" : "light");
+      localStorage.setItem("theme", isLight ? "dark" : "light");
+      document.querySelector(".theme-toggle i").className = isLight ? "ri-moon-line" : "ri-sun-line";
+    }
+
+    // Load saved theme
+    (function () {
+      const saved = localStorage.getItem("theme");
+      if (saved) document.documentElement.setAttribute("data-theme", saved);
+    })();
+  </script>
+</body>
+
+</html>
