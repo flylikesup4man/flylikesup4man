@@ -99,17 +99,16 @@
 </head>
 
 <body>
-  <!-- Tema Değiştirici -->
   <button class="theme-toggle" onclick="toggleTheme()" title="Tema Değiştir">
     <i class="ri-moon-line"></i>
   </button>
 
-  <!-- Giriş -->
+  
   <h1>Kürşat Şahin</h1>
   <p>I build and improve things.<br>
   Always learning, always building.</p>
 
-  <!-- Sosyal Linkler -->
+  
   <div class="socials">
     <a href="https://github.com/flylikesup4man" target="_blank" rel="noopener noreferrer"> <i class="ri-github-fill"></i></a>
     <a href="https://linkedin.com/in/kursat0sahin" target="_blank"><i class="ri-linkedin-fill"></i></a>
@@ -117,7 +116,7 @@
     <a href="https://horusforgedev.itch.io" target="_blank" rel="noopener noreferrer" aria-label="itch.io"> <i class="fa-brands fa-itch-io"></i> </a>
   </div>
 
-  <!-- Projeler -->
+  
   <section class="projects">
     <h2>Projects</h2>
 
@@ -162,7 +161,7 @@
       document.querySelector(".theme-toggle i").className = isLight ? "ri-moon-line" : "ri-sun-line";
     }
 
-    // Load saved theme
+    
     (function () {
       const saved = localStorage.getItem("theme");
       if (saved) document.documentElement.setAttribute("data-theme", saved);
